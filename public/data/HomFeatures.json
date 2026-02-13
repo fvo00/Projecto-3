@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "icono": "🚀",
+    "titulo": "Velocidad",
+    "descripcion": "Desarrollo ágil con herramientas como Artisan y migraciones automáticas."
+  },
+  {
+    "id": 2,
+    "icono": "🛡️",
+    "titulo": "Seguridad",
+    "descripcion": "Protección nativa contra inyección SQL, CSRF y XSS de serie."
+  },
+  {
+    "id": 3,
+    "icono": "💎",
+    "titulo": "Elegancia",
+    "descripcion": "Sintaxis expresiva que hace que el código sea un placer de leer y mantener."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿Qué comando de Artisan se usa para crear un controlador?",
+    "opciones": ["make:controller", "generate:controller", "create:controller"],
+    "correcta": 0
+  },
+  {
+    "id": 2,
+    "pregunta": "¿Qué motor de plantillas utiliza Laravel por defecto?",
+    "opciones": ["Twig", "Blade", "Smarty"],
+    "correcta": 1
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Cuál es el ORM que utiliza Laravel?",
+    "opciones": ["Hibernate", "Doctrine", "Eloquent"],
+    "correcta": 2
+  },
+  {
+    "id": 4,
+    "pregunta": "¿En qué carpeta se definen las rutas de la web?",
+    "opciones": ["routes/", "app/Http/", "config/"],
+    "correcta": 0
+  },
+  {
+    "id": 5,
+    "pregunta": "¿Qué comando se usa para ejecutar las migraciones?",
+    "opciones": ["php artisan migrate:run", "php artisan migrate", "php artisan db:migrate"],
+    "correcta": 1
+  },
+  {
+    "id": 6,
+    "pregunta": "¿Cómo se llama el sistema de autenticación ligero de Laravel?",
+    "opciones": ["Sanctum", "Passport", "Fortify"],
+    "correcta": 0
+  },
+  {
+    "id": 7,
+    "pregunta": "¿Qué herramienta se usa para gestionar las dependencias de PHP?",
+    "opciones": ["NPM", "Composer", "Artisan"],
+    "correcta": 1
+  },
+  {
+    "id": 8,
+    "pregunta": "¿Qué patrón de diseño sigue Laravel?",
+    "opciones": ["Singleton", "MVC", "Factory"],
+    "correcta": 1
+  },
+  {
+    "id": 9,
+    "pregunta": "¿Para qué sirven las 'Migrations'?",
+    "opciones": ["Versioar la base de datos", "Mover archivos", "Optimizar imágenes"],
+    "correcta": 0
+  },
+  {
+    "id": 10,
+    "pregunta": "¿Qué middleware protege las rutas contra ataques de falsificación?",
+    "opciones": ["Auth", "VerifyCsrfToken", "ThrottleRequests"],
+    "correcta": 1
+  }
+]

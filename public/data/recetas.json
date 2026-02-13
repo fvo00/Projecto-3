@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "titulo": "Autenticación de API con Sanctum",
+    "tags": ["api", "auth"],
+    "pasos": "1. Instalar Sanctum. 2. Añadir Middleware. 3. Crear tokens.",
+    "codigo": "composer require laravel/sanctum\nphp artisan vendor:publish"
+  },
+  {
+    "id": 2,
+    "titulo": "Relaciones One-to-Many en Eloquent",
+    "tags": ["eloquent"],
+    "pasos": "1. Definir método en el Modelo. 2. Usar hasMany.",
+    "codigo": "public function comments() {\n  return $this->hasMany(Comment::class);\n}"
+  },
+  {
+    "id": 3,
+    "titulo": "Validación de Formularios (Form Request)",
+    "tags": ["validation"],
+    "pasos": "1. Crear el Request. 2. Definir reglas. 3. Inyectar en el Controller.",
+    "codigo": "php artisan make:request StorePostRequest"
+  }
+]

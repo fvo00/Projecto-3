@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ecommerce-pro",
+    "nombre": "E-commerce Global",
+    "objetivo": "Plataforma de ventas escalable con pagos internacionales.",
+    "modulos": ["Eloquent", "Stripe Integration", "Job Queues", "Mailables"],
+    "stack": "Laravel, Vue.js, MySQL",
+    "dificultad": "Alta"
+  },
+  {
+    "id": "crm-asix",
+    "nombre": "CRM Gestión Interna",
+    "objetivo": "Panel de administración para gestión de clientes y tickets.",
+    "modulos": ["Auth (Breeze)", "Policies/Gates", "Migrations", "Validation"],
+    "stack": "Laravel, Blade, PostgreSQL",
+    "dificultad": "Media"
+  },
+  {
+    "id": "api-reserva",
+    "nombre": "API Rest Reservas",
+    "objetivo": "Backend para una app móvil de reserva de espacios.",
+    "modulos": ["API Resources", "Sanctum", "Middleware", "Rate Limiting"],
+    "stack": "Laravel (API mode), Redis",
+    "dificultad": "Media"
+  },
+  {
+    "id": "blog-seo",
+    "nombre": "CMS con Optimización SEO",
+    "objetivo": "Gestor de contenidos optimizado para buscadores.",
+    "modulos": ["Blade Components", "Spatie Tags", "Eloquent Slugs"],
+    "stack": "Laravel, Tailwind CSS, SQLite",
+    "dificultad": "Baja"
+  }
+]

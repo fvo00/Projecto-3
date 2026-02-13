@@ -1,0 +1,50 @@
+[
+  {
+    "id": "routing",
+    "titulo": "Routing",
+    "resumen": "Gestión de URLs y puntos de entrada.",
+    "contenido": "El routing en Laravel permite dirigir las peticiones HTTP a controladores o cierres específicos en routes/web.php."
+  },
+  {
+    "id": "mvc",
+    "titulo": "MVC",
+    "resumen": "Patrón Modelo-Vista-Controlador.",
+    "contenido": "Laravel separa la lógica de negocio (Modelos), la interfaz (Vistas) y la gestión de peticiones (Controladores)."
+  },
+  {
+    "id": "eloquent",
+    "titulo": "Eloquent ORM",
+    "resumen": "Manejo de base de datos de forma elegante.",
+    "contenido": "Permite interactuar con la base de datos usando objetos de PHP en lugar de escribir SQL puro."
+  },
+  {
+    "id": "migrations",
+    "titulo": "Migrations",
+    "resumen": "Control de versiones para tu base de datos.",
+    "contenido": "Las migraciones permiten definir y compartir la estructura de la base de datos del equipo fácilmente."
+  },
+  {
+    "id": "blade",
+    "titulo": "Blade Templates",
+    "resumen": "Sistema de plantillas potente.",
+    "contenido": "Blade permite escribir PHP limpio en tus vistas y heredar layouts para no repetir código."
+  },
+  {
+    "id": "middleware",
+    "titulo": "Middleware",
+    "resumen": "Filtros para peticiones HTTP.",
+    "contenido": "Los middlewares inspeccionan y filtran las peticiones que entran a tu aplicación (ej: verificar autenticación)."
+  },
+  {
+    "id": "validation",
+    "titulo": "Validation",
+    "resumen": "Seguridad en los datos de entrada.",
+    "contenido": "Laravel ofrece una forma sencilla de validar los datos de formularios antes de procesarlos."
+  },
+  {
+    "id": "auth",
+    "titulo": "Authentication",
+    "resumen": "Sistema de usuarios listo para usar.",
+    "contenido": "Incluye servicios para registro, login y protección de rutas mediante guards."
+  }
+]
