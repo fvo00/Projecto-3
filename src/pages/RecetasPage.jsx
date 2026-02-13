@@ -6,7 +6,7 @@ export default function Recetas() {
   const [busqueda, setBusqueda] = useState("");
   const [tagFiltro, setTagFiltro] = useState("");
 
-  // Llamamos al servicio al montar el componente
+  
   useEffect(() => {
     const fetchRecetas = async () => {
       const data = await getRecetas();
@@ -15,7 +15,6 @@ export default function Recetas() {
     fetchRecetas();
   }, []);
 
-  // Lógica de filtrado combinada
   const recetasFiltradas = recetas.filter(receta => {
     const coincideBusqueda = receta.titulo.toLowerCase().includes(busqueda.toLowerCase());
     const coincideTag = tagFiltro === "" || receta.tags.includes(tagFiltro);
