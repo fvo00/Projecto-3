@@ -23,7 +23,7 @@ export function Footer() {
           <p>Desarrollado por <strong>Fernando Villanueva Ortiz</strong></p>
           <p>IAW - 2º ASIX - 2026</p>
           <div className="social-links">
-             <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+             <a href="https://github.com/fvo00/Projecto-3" target="_blank" rel="noreferrer">GitHub</a>
              <a href="https://laravel.com" target="_blank" rel="noreferrer">Laravel Docs</a>
           </div>
         </div>
