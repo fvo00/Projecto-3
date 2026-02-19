@@ -11,7 +11,8 @@ export default function ProyectoDetalle() {
     const fetchProyecto = async () => {
       try {
         const proyectos = await getProyectos();
-        const encontrado = proyectos.find(p => p.id.toString() === id);
+        // Comparación robusta por si el ID es string o number
+        const encontrado = proyectos.find(p => String(p.id) === String(id));
         setProyecto(encontrado);
       } catch (error) {
         console.error("Error cargando el detalle:", error);
@@ -20,62 +21,94 @@ export default function ProyectoDetalle() {
       }
     };
     fetchProyecto();
+    window.scrollTo(0, 0);
   }, [id]);
 
-  if (loading) return <div className="container loading">Cargando detalles del proyecto...</div>;
-  
+  if (loading) return <div className="loading-screen">Analizando arquitectura...</div>;
   if (!proyecto) return (
     <div className="container error-box">
-      <h2>Proyecto no encontrado</h2>
-      <Link to="/proyectos" className="btn-primary">Volver al listado</Link>
+      <h2>⚠️ Proyecto no disponible</h2>
+      <Link to="/proyectos" className="btn-primary">Volver al Showcase</Link>
     </div>
   );
 
   return (
-    <div className="container project-detail-page">
-      {/* Cabecera con navegación */}
-      <nav className="breadcrumb">
-        <Link to="/proyectos">Proyectos</Link> / <span>{proyecto.nombre}</span>
-      </nav>
-
-      <header className="project-header">
-        <div className="header-content">
-          <span className="badge-dificultad">{proyecto.dificultad || 'Nivel Pro'}</span>
-          <h1>{proyecto.nombre}</h1>
-          <p className="project-tagline">{proyecto.objetivo}</p>
+    <div className="project-detail-wrapper">
+      {/* HEADER DE IMPACTO */}
+      <header className="project-hero-detail">
+        <div className="container">
+          <Link to="/proyectos" className="back-link-modern">← Volver al Showcase</Link>
+          <div className="hero-split">
+            <div className="hero-text">
+              <span className={`diff-pill ${proyecto.dificultad?.toLowerCase()}`}>
+                Nivel {proyecto.dificultad}
+              </span>
+              <h1>{proyecto.nombre}</h1>
+              <p>{proyecto.objetivo}</p>
+            </div>
+            <div className="hero-stack-visual">
+               {/* Genera iconos automáticamente según el stack del JSON */}
+               <img src={`https://skillicons.dev/icons?i=${proyecto.stack?.toLowerCase().replace(/ /g, '')}`} alt="Stack" />
+            </div>
+          </div>
         </div>
       </header>
 
-      <div className="project-grid">
-        {/* Columna Principal: Info Técnica */}
-        <div className="project-main">
-          <section className="detail-card">
-            <h3>Descripción del Stack</h3>
-            <p>{proyecto.stack}</p>
-          </section>
-
-          <section className="detail-card">
-            <h3>Módulos de Laravel Implicados</h3>
-            <div className="modules-tags">
+      <div className="container project-grid-layout">
+        <main className="project-main-info">
+          
+          {/* TARJETA DE ARQUITECTURA */}
+          <section className="info-section-card">
+            <h3>🚀 Módulos Core de Laravel</h3>
+            <p>Este proyecto se centra en la implementación profunda de las siguientes características del framework:</p>
+            <div className="modules-grid">
               {proyecto.modulos?.map(m => (
-                <span key={m} className="module-tag">{m}</span>
+                <div key={m} className="module-item">
+                  <span className="dot-check">✓</span> {m}
+                </div>
               ))}
             </div>
           </section>
-        </div>
 
-        {/* Barra lateral: Quick Info */}
-        <aside className="project-sidebar">
-          <div className="sidebar-box">
-            <h4>Ficha Técnica</h4>
-            <ul>
-              <li><strong>Categoría:</strong> Backend</li>
-              <li><strong>Framework:</strong> Laravel 11.x</li>
-              <li><strong>Database:</strong> Relacional</li>
+          {/* ROADMAP / PASOS */}
+          <section className="info-section-card">
+            <h3>🛠️ Proceso de Desarrollo</h3>
+            <div className="roadmap-list">
+              <div className="roadmap-step">
+                <div className="step-circle">1</div>
+                <div className="step-text"><strong>Modelado de Datos:</strong> Diseño de migraciones y relaciones en Eloquent.</div>
+              </div>
+              <div className="roadmap-step">
+                <div className="step-circle">2</div>
+                <div className="step-text"><strong>Lógica de Negocio:</strong> Implementación de Controllers, Services y Validation.</div>
+              </div>
+              <div className="roadmap-step">
+                <div className="step-circle">3</div>
+                <div className="step-text"><strong>Seguridad:</strong> Configuración de Policies y Middlewares de acceso.</div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <aside className="project-sidebar-detail">
+          <div className="sidebar-widget-pro">
+            <h4>Especificaciones</h4>
+            <ul className="spec-list">
+              <li><strong>Stack:</strong> {proyecto.stack}</li>
+              <li><strong>Base de Datos:</strong> MySQL / PostgreSQL</li>
+              <li><strong>Entorno:</strong> Laravel 11 + Vite</li>
+              <li><strong>Status:</strong> <span className="status-live">Production Ready</span></li>
             </ul>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="btn-outline full-width">
-              Ver Repositorio
-            </a>
+            <hr />
+            <button className="btn-github-full" onClick={() => window.open('https://github.com', '_blank')}>
+               Ver Código Fuente
+            </button>
+          </div>
+
+          <div className="sidebar-widget-pro dark-widget">
+            <h4>¿Quieres replicarlo?</h4>
+            <p>Clona el repositorio y sigue el README para configurar las variables de entorno.</p>
+            <code>cp .env.example .env</code>
           </div>
         </aside>
       </div>

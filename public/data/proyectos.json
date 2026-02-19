@@ -30,5 +30,37 @@
     "modulos": ["Blade Components", "Spatie Tags", "Eloquent Slugs"],
     "stack": "Laravel, Tailwind CSS, SQLite",
     "dificultad": "Baja"
+  },
+  {
+    "id": "realtime-chat",
+    "nombre": "Chat Multiusuario Pro",
+    "objetivo": "Sistema de mensajería instantánea con notificaciones en vivo.",
+    "modulos": ["Laravel Reverb", "Broadcasting", "Events", "Echo"],
+    "stack": "Laravel 11, Livewire, Redis",
+    "dificultad": "Alta"
+  },
+  {
+    "id": "saas-sub",
+    "nombre": "SaaS Starter Kit",
+    "objetivo": "Sistema de suscripciones mensuales con diferentes niveles de acceso.",
+    "modulos": ["Laravel Cashier", "Multi-tenancy", "Middleware", "Billing"],
+    "stack": "Laravel, React, Stripe",
+    "dificultad": "Alta"
+  },
+  {
+    "id": "ai-generator",
+    "nombre": "Generador de Contenido AI",
+    "objetivo": "App que conecta con OpenAI para generar resúmenes automáticos.",
+    "modulos": ["HTTP Client", "Service Providers", "Caché", "Rate Limiting"],
+    "stack": "Laravel, Alpine.js, OpenAI API",
+    "dificultad": "Media"
+  },
+  {
+    "id": "cloud-storage",
+    "nombre": "Gestor de Archivos Cloud",
+    "objetivo": "Clon de Dropbox con subida directa a servicios externos.",
+    "modulos": ["Filesystem (S3)", "Signed URLs", "Observers", "Validation"],
+    "stack": "Laravel, Amazon S3, MySQL",
+    "dificultad": "Media"
   }
 ]

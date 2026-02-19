@@ -19,5 +19,40 @@
     "tags": ["validation"],
     "pasos": "1. Crear el Request. 2. Definir reglas. 3. Inyectar en el Controller.",
     "codigo": "php artisan make:request StorePostRequest"
+  },
+  {
+    "id": 4,
+    "titulo": "Crear y Ejecutar Migraciones",
+    "tags": ["eloquent"],
+    "pasos": "1. Crear archivo de migración. 2. Definir columnas. 3. Ejecutar comando migrate.",
+    "codigo": "php artisan make:migration create_products_table\nphp artisan migrate"
+  },
+  {
+    "id": 5,
+    "titulo": "Middleware para Roles de Usuario",
+    "tags": ["auth"],
+    "pasos": "1. Crear Middleware. 2. Registrar en bootstrap/app.php. 3. Aplicar en rutas.",
+    "codigo": "php artisan make:middleware CheckRole\n\n// En el middleware:\nif ($request->user()->role !== $role) { abort(403); }"
+  },
+  {
+    "id": 6,
+    "titulo": "Controlador Invocable (Single Action)",
+    "tags": ["api"],
+    "pasos": "1. Crear controlador con --invokable. 2. Definir método __invoke. 3. Registrar ruta simple.",
+    "codigo": "php artisan make:controller ShowProfileController --invokable\n\n// Ruta:\nRoute::get('/profile', ShowProfileController::class);"
+  },
+  {
+    "id": 7,
+    "titulo": "Envío de Emails con Mailables",
+    "tags": ["api"],
+    "pasos": "1. Configurar .env. 2. Crear clase Mailable. 3. Usar el Facade Mail::to().",
+    "codigo": "php artisan make:mail WelcomeMail\n\nMail::to($user)->send(new WelcomeMail($user));"
+  },
+  {
+    "id": 8,
+    "titulo": "Scopes en Modelos Eloquent",
+    "tags": ["eloquent"],
+    "pasos": "1. Crear método scopeNombre. 2. Añadir lógica de consulta. 3. Encadenar en el query.",
+    "codigo": "public function scopeActive($query) {\n  return $query->where('status', 'active');\n}\n\n// Uso: User::active()->get();"
   }
 ]
