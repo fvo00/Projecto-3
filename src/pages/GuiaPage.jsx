@@ -14,14 +14,12 @@ export default function Guia() {
     fetchTemas();
   }, []);
 
-  // Filtrado en tiempo real
   const temasFiltrados = temas.filter(t => 
     t.titulo.toLowerCase().includes(busqueda.toLowerCase())
   );
 
   return (
     <div className="guia-container">
-      {/* SECCIÓN HERO */}
       <header className="guia-hero-header">
         <div className="container header-flex">
           <div className="header-content">
@@ -52,7 +50,6 @@ export default function Guia() {
         </div>
       </header>
 
-      {/* SECCIÓN DE CARDS */}
       <main className="container section-padding">
         <div className="list-header">
           <h3>Explorar Módulos ({temasFiltrados.length})</h3>

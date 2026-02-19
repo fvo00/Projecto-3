@@ -1,10 +1,9 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link,  } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getTemas } from '../services/ImportTemas';
 
 export default function GuiaDetalle() {
   const { id } = useParams();
-  const navigate = useNavigate();
   const [tema, setTema] = useState(null);
   const [totalTemas, setTotalTemas] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -36,7 +35,6 @@ export default function GuiaDetalle() {
 
   return (
     <div className="guide-wrapper">
-      {/* BANNER SUPERIOR CON IMAGEN */}
       <div className="hero-banner" style={{ 
         backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=1200&q=80')` 
       }}>
@@ -52,7 +50,6 @@ export default function GuiaDetalle() {
 
       <div className="container main-layout">
         <div className="content-side">
-          {/* CALLOUT VISUAL */}
           <div className="alert-card">
             <div className="alert-icon">🚀</div>
             <div className="alert-text">
@@ -70,7 +67,6 @@ export default function GuiaDetalle() {
               <p className="big-text">{tema.contenido}</p>
             </section>
 
-            {/* IMAGEN ILUSTRATIVA MEDIA */}
             <div className="mid-page-image">
                <img src="https://skillicons.dev/icons?i=laravel,php,mysql,nginx&perline=4" alt="Tech Stack" />
                <p className="image-caption">Ecosistema tecnológico involucrado en este módulo.</p>
@@ -96,20 +92,8 @@ export default function GuiaDetalle() {
             )}
           </article>
 
-          {/* NAVEGACIÓN PRO */}
-          <div className="bottom-nav">
-            <button className="nav-card prev" disabled={idNum <= 1} onClick={() => navigate(`/guia/${idNum - 1}`)}>
-              <small>Anterior</small>
-              <span>Tema {idNum - 1}</span>
-            </button>
-            <button className="nav-card next" disabled={idNum >= totalTemas} onClick={() => navigate(`/guia/${idNum + 1}`)}>
-              <small>Siguiente</small>
-              <span>Tema {idNum + 1}</span>
-            </button>
-          </div>
         </div>
 
-        {/* SIDEBAR REFORZADA */}
         <aside className="sticky-sidebar">
           <div className="side-box progress-box">
             <h4>Tu Progreso</h4>

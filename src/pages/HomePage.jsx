@@ -28,8 +28,8 @@ export default function Home() {
               Elegancia en el código, potencia en el despliegue.
             </p>
             <div className="cta-flex">
-              <button className="btn-main" onClick={() => navigate('/guia')}>Empezar Ruta</button>
-              <button className="btn-secondary" onClick={() => navigate('/proyectos')}>Explorar Galería</button>
+              <button className="btn-primary" onClick={() => navigate('/guia')}>Empezar Ruta</button>
+              <button className="btn-primary" onClick={() => navigate('/proyectos')}>Explorar Galería</button>
             </div>
           </div>
           
@@ -51,7 +51,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* TECH STACK STRIP */}
       <div className="tech-strip">
         <div className="container strip-flex">
           <span>POWERED BY:</span>
@@ -59,7 +58,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* FEATURES SECTION */}
       <section className="container features-modern">
         <div className="section-intro">
           <h2>¿Por qué Laravel?</h2>

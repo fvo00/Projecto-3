@@ -15,7 +15,6 @@ export default function Proyectos() {
 
   return (
     <div className="proyectos-wrapper">
-      {/* SECCIÓN HERO SHOWCASE */}
       <header className="projects-hero">
         <div className="container">
           <div className="hero-badge">Explora y Aprende</div>
@@ -28,7 +27,6 @@ export default function Proyectos() {
         <div className="projects-grid-pro">
           {proyectos.map(p => (
             <div key={p.id} className="project-card-pro">
-              {/* Parte superior: Imagen/Icono dinámico */}
               <div className="project-visual">
                 <img src={`https://skillicons.dev/icons?i=laravel,php,mysql&perline=3`} alt="Stack" />
                 <span className={`difficulty-tag ${p.dificultad.toLowerCase()}`}>
@@ -36,7 +34,6 @@ export default function Proyectos() {
                 </span>
               </div>
 
-              {/* Contenido */}
               <div className="project-info">
                 <h3>{p.nombre}</h3>
                 <p className="project-objective">{p.objetivo}</p>

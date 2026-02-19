@@ -11,7 +11,6 @@ export default function ProyectoDetalle() {
     const fetchProyecto = async () => {
       try {
         const proyectos = await getProyectos();
-        // Comparación robusta por si el ID es string o number
         const encontrado = proyectos.find(p => String(p.id) === String(id));
         setProyecto(encontrado);
       } catch (error) {
@@ -34,7 +33,6 @@ export default function ProyectoDetalle() {
 
   return (
     <div className="project-detail-wrapper">
-      {/* HEADER DE IMPACTO */}
       <header className="project-hero-detail">
         <div className="container">
           <Link to="/proyectos" className="back-link-modern">← Volver al Showcase</Link>
@@ -47,7 +45,6 @@ export default function ProyectoDetalle() {
               <p>{proyecto.objetivo}</p>
             </div>
             <div className="hero-stack-visual">
-               {/* Genera iconos automáticamente según el stack del JSON */}
                <img src={`https://skillicons.dev/icons?i=${proyecto.stack?.toLowerCase().replace(/ /g, '')}`} alt="Stack" />
             </div>
           </div>
@@ -57,7 +54,6 @@ export default function ProyectoDetalle() {
       <div className="container project-grid-layout">
         <main className="project-main-info">
           
-          {/* TARJETA DE ARQUITECTURA */}
           <section className="info-section-card">
             <h3>🚀 Módulos Core de Laravel</h3>
             <p>Este proyecto se centra en la implementación profunda de las siguientes características del framework:</p>
@@ -70,7 +66,6 @@ export default function ProyectoDetalle() {
             </div>
           </section>
 
-          {/* ROADMAP / PASOS */}
           <section className="info-section-card">
             <h3>🛠️ Proceso de Desarrollo</h3>
             <div className="roadmap-list">

@@ -24,7 +24,6 @@ export default function Recetas() {
 
   return (
     <div className="cookbook-wrapper">
-      {/* HEADER ESTILO COOKBOOK */}
       <header className="cookbook-header">
         <div className="container">
           <span className="chef-icon">🍳</span>
@@ -60,7 +59,6 @@ export default function Recetas() {
         </div>
       </header>
 
-      {/* GRID DE RECETAS */}
       <main className="container recipes-grid">
         {recetasFiltradas.map(receta => (
           <article key={receta.id} className="recipe-card">

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-// Tarjeta para la Guía Técnica (8 temas mínimos) [cite: 19]
+
 export function TemaCard({ tema }) {
   return (
     <div className="card">
